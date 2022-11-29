@@ -1,24 +1,23 @@
 import React from 'react';
 import './App.css';
-import { useQuery, gql } from "@apollo/client";
+import { useQuery, gql } from '@apollo/client';
 
 const FILMS_QUERY = gql`
-{
-	countries {
-		name,
-		code
+	{
+		countries {
+			name
+			code
+		}
 	}
-}
 `;
 
 function App() {
-
 	const { data, loading, error } = useQuery(FILMS_QUERY);
 	console.log(data);
-	console.log(loading)
+	console.log(loading);
 
-	if (loading) return <>"Loading..."</>;
-	if (error) return <pre>{error.message}</pre>
+	if (loading) return <>Loading...</>;
+	if (error) return <pre>{error.message}</pre>;
 
 	return (
 		<div>
