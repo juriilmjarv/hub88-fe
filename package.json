@@ -4,10 +4,10 @@
   "private": true,
   "dependencies": {
     "@apollo/client": "^3.7.1",
-    "@testing-library/jest-dom": "^5.16.5",
+    "@mui/material": "^5.10.16",
+    "@mui/styled-engine-sc": "^5.10.16",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
-    "@types/jest": "^27.5.2",
     "@types/node": "^16.18.3",
     "@types/react": "^18.0.25",
     "@types/react-dom": "^18.0.9",
@@ -15,14 +15,14 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
+    "styled-components": "^5.3.6",
     "typescript": "^4.9.3",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
+    "start": "craco start",
+    "build": "craco build",
+    "test": "craco test",
     "lint": "eslint .",
     "lint:fix": "eslint --fix",
     "format": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc",
@@ -47,10 +47,14 @@
     ]
   },
   "devDependencies": {
+    "@craco/craco": "^7.0.0",
+    "@types/styled-components": "^5.1.26",
+    "craco-alias": "^3.0.1",
     "eslint": "^8.28.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.2.1",
-    "prettier": "^2.8.0",
-    "husky": "^8.0.0"
+    "husky": "^8.0.0",
+    "jest": "^27.5.1",
+    "prettier": "^2.8.0"
   }
 }

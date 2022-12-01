@@ -1,33 +1,18 @@
-import React from 'react';
-import './App.css';
-import { useQuery, gql } from '@apollo/client';
+import { Container } from '@mui/material';
+import Hub88 from './components/Hub88';
+import styled from 'styled-components';
 
-const FILMS_QUERY = gql`
-	{
-		countries {
-			name
-			code
-		}
-	}
+const Heading = styled.h1`
+	display: flex;
+	justify-content: center;
 `;
 
 function App() {
-	const { data, loading, error } = useQuery(FILMS_QUERY);
-	console.log(data);
-	console.log(loading);
-
-	if (loading) return <>Loading...</>;
-	if (error) return <pre>{error.message}</pre>;
-
 	return (
-		<div>
-			<h1>Hub88</h1>
-			<ul>
-				{data.countries.map((launch: any) => (
-					<li key={launch.code}>{launch.name}</li>
-				))}
-			</ul>
-		</div>
+		<Container maxWidth="sm">
+			<Heading>Hub88 Home Task</Heading>
+			<Hub88 />
+		</Container>
 	);
 }
 
