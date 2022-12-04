@@ -24,7 +24,7 @@ const MUITable = ({ data, searchValue }: TableProps) => {
 	}, [searchValue]);
 
 	return (
-		<S.TableWrapper>
+		<S.TableWrapper data-testid="table">
 			<Table>
 				<TableHead>
 					<S.THeaderRow>
@@ -35,10 +35,12 @@ const MUITable = ({ data, searchValue }: TableProps) => {
 				</TableHead>
 			</Table>
 			<S.TBodyWrapper>
-				<Table style={{ tableLayout: 'fixed' }}>
+				<Table data-testid="table-data">
 					<TableBody>
 						{!countries.length ? (
-							<S.NoRecords>No Records :(</S.NoRecords>
+							<TableRow>
+								<S.NoRecords>No Records :(</S.NoRecords>
+							</TableRow>
 						) : (
 							countries.map((country: Country, index: number) => {
 								return (

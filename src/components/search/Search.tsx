@@ -11,6 +11,7 @@ const Search = ({ onChange }: SearchProps) => {
 			onChange={onChange}
 			placeholder="Search by country code ..."
 			maxLength={2}
+			data-testid="search"
 		/>
 	);
 };

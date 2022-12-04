@@ -15,7 +15,7 @@ export const TBodyWrapper = styled.div`
 	height: 60vh;
 `;
 
-export const NoRecords = styled.div`
+export const NoRecords = styled.td`
 	position: absolute;
 	top: 50%;
 	left: 50%;
