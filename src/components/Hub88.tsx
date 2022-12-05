@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
-import { gql, useQuery } from '@apollo/client';
+import { useQuery } from '@apollo/client';
 import { CircularProgress, Stack } from '@mui/material';
 import { COUNTRIES_QUERY } from '../queries';
 import Search from './search/Search';
 import MUITable from './table/Table';
-import { Countries, Country } from '../types';
 
 const Hub88 = () => {
 	const { data, loading, error } = useQuery(COUNTRIES_QUERY);
