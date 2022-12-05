@@ -7,7 +7,7 @@ type SearchProps = {
 const Search = ({ onChange }: SearchProps) => {
 	return (
 		<SearchComp
-			type="text"
+			type="search"
 			onChange={onChange}
 			placeholder="Search by country code ..."
 			maxLength={2}

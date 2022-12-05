@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
-import { useQuery } from '@apollo/client';
+import { gql, useQuery } from '@apollo/client';
 import { CircularProgress, Stack } from '@mui/material';
 import { COUNTRIES_QUERY } from '../queries';
 import Search from './search/Search';
 import MUITable from './table/Table';
+import { Countries, Country } from '../types';
 
 const Hub88 = () => {
 	const { data, loading, error } = useQuery(COUNTRIES_QUERY);
@@ -19,7 +20,9 @@ const Hub88 = () => {
 				<CircularProgress data-testid="loading" />
 			</Stack>
 		);
+
 	if (error) return <pre>{error.message}</pre>;
+	if (!data?.countries) return <pre>Error ocurred</pre>;
 
 	return (
 		<>

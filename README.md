@@ -2,7 +2,7 @@
 
 React application that consumes GraphQL [countries](https://countries.trevorblades.com/) data and displays the results in a table with search.
 
-![Screenshot 2022-12-04 at 18 13 52](https://user-images.githubusercontent.com/33321676/205502269-d0abc362-2c1c-43f2-b347-9c6568918dd5.png)
+Live app on GitHub Pages: [https://juriilmjarv.github.io/hub88-fe/]
 
 ## In the project directory run:
 
